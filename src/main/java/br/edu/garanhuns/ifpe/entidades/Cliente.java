@@ -22,18 +22,18 @@ public class Cliente {
 
     @Id
     @GeneratedValue
-    private int id;
-    @Column(length = 30, nullable = false)
+    private long id;
+    @Column(length = 30)
     private String nome;
-    @Column(length = 11, nullable = false)
+    @Column(length = 11)
     private int cpf;
-    @Column(length = 12, nullable = false)
+    @Column(length = 12)
     private String telefone;
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     private String endereco;
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     private boolean pendencia;
-    @Column(length = 1000, nullable = false)
+    @Column(length = 1000)
     private List<Dependente> dependentes;
  
 
@@ -43,7 +43,7 @@ public class Cliente {
         this.endereco = endereco;
         this.pendencia = pendencia;
     }
-
+  @Deprecated
     public Cliente() {
     }
 

@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,17 +19,17 @@ public class Dependente {
     @Id
     @GeneratedValue
     private int id;
-    @Column(length = 30, nullable = false)
+   @ManyToOne
     private Cliente cliente;
-    @Column(length = 30, nullable = false)
+    @Column(length = 30)
     private String nome;
-    @Column(length = 11, nullable = false)
+    @Column(length = 11)
     private int cpf;
-    @Column(length = 12, nullable = false)
+    @Column(length = 12)
     private String telefone;
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     private String endereco;
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     private boolean pendencia;
     
     public Dependente(Cliente cliente, String nome, int cpf, String telefone, String endereco, boolean pendencia) {
@@ -39,6 +40,7 @@ public class Dependente {
         this.endereco = endereco;
         this.pendencia = pendencia;
     }
+      @Deprecated
     public Dependente() {
     }
 

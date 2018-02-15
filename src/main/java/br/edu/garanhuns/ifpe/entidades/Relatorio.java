@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -23,20 +24,16 @@ public class Relatorio {
     @Id
     @GeneratedValue
     private int id;
-    @Column(length = 30, nullable = false)
+    
+    @ManyToOne
     private Cliente cliente;
-
     @Column(length = 8, nullable = false)
-
     private Date dataEntrega;
-    @Column(length = 30, nullable = false)
-
+    @Column(length = 30)
     private double valorMulta;
-    @Column(length = 8, nullable = false)
-
+    @Column(length = 8)
     private Date dataEmprestimo;
-
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String tempoAtraso;
 
     public Relatorio(Cliente cliente, Date dataEntrega, double valorMulta, Date dataEmprestimo, String tempoAtraso) {
@@ -47,6 +44,7 @@ public class Relatorio {
         this.tempoAtraso = tempoAtraso;
     }
 
+    @Deprecated
     public Relatorio() {
     }
 
