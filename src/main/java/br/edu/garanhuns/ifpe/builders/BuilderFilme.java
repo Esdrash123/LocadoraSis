@@ -6,16 +6,21 @@
 package br.edu.garanhuns.ifpe.builders;
 
 import br.edu.garanhuns.ifpe.entidades.Filme;
-import java.util.Date;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
 /**
  *
  * @author esdra
  */
+
+@ManagedBean(name="bFilme")
+@ViewScoped
+
 public class BuilderFilme {
     private String titulo;
     private String sinopse;
-    private Date dataLancamento;
+    private String dataLancamento;
     private int faixaIndicativa;
     private boolean disponivel;
 
@@ -35,11 +40,11 @@ public class BuilderFilme {
         this.sinopse = sinopse;
     }
 
-    public Date getDataLancamento() {
+    public String getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 

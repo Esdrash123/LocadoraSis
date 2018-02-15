@@ -8,11 +8,15 @@ package br.edu.garanhuns.ifpe.builders;
 import br.edu.garanhuns.ifpe.entidades.Cliente;
 import br.edu.garanhuns.ifpe.entidades.Relatorio;
 import java.util.Date;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
 /**
  *
  * @author esdra
  */
+@ManagedBean(name="bRelatorio")
+@ViewScoped
 public class BuilderRelatorio {
     private Cliente cliente;
     private Date dataEntrega;

@@ -25,17 +25,17 @@ public class Relatorio {
     private int id;
     @Column(length = 30, nullable = false)
     private Cliente cliente;
-    
+
     @Column(length = 8, nullable = false)
-   
+
     private Date dataEntrega;
     @Column(length = 30, nullable = false)
-    
+
     private double valorMulta;
     @Column(length = 8, nullable = false)
-    
+
     private Date dataEmprestimo;
-    
+
     @Column(length = 20, nullable = false)
     private String tempoAtraso;
 
@@ -45,6 +45,9 @@ public class Relatorio {
         this.valorMulta = valorMulta;
         this.dataEmprestimo = dataEmprestimo;
         this.tempoAtraso = tempoAtraso;
+    }
+
+    public Relatorio() {
     }
 
     public Cliente getCliente() {

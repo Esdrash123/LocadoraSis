@@ -7,11 +7,15 @@ package br.edu.garanhuns.ifpe.builders;
 
 import br.edu.garanhuns.ifpe.entidades.Cliente;
 import br.edu.garanhuns.ifpe.entidades.Dependente;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
 /**
  *
  * @author esdra
  */
+@ManagedBean(name="bDependente")
+@ViewScoped
 public class BuilderDependente {
     
     private Cliente cliente;

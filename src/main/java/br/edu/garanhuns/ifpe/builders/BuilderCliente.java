@@ -9,11 +9,15 @@ import br.edu.garanhuns.ifpe.entidades.Cliente;
 import br.edu.garanhuns.ifpe.entidades.Dependente;
 import br.edu.garanhuns.ifpe.entidades.Filme;
 import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
 /**
  *
  * @author esdra
  */
+@ManagedBean(name="bCliente")
+@ViewScoped
 public class BuilderCliente {
 
     private String nome;

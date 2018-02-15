@@ -35,8 +35,7 @@ public class Cliente {
     private boolean pendencia;
     @Column(length = 1000, nullable = false)
     private List<Dependente> dependentes;
-    @Column(length = 1000, nullable = false)
-    private List<Filme> historicoDealugueis;
+ 
 
     public Cliente(String nome, int cpf, String endereco, boolean pendencia) {
         this.nome = nome;
@@ -45,19 +44,9 @@ public class Cliente {
         this.pendencia = pendencia;
     }
 
-    public Cliente(int cpf, List<Dependente> dependentes, String endereco, List<Filme> historicoDealugueis, String nome, boolean pendencia, String telefone) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Cliente() {
     }
 
-   
-
-    public List<Filme> getHistoricoDealugueis() {
-        return historicoDealugueis;
-    }
-
-    public void setHistoricoDealugueis(List<Filme> historicoDealugueis) {
-        this.historicoDealugueis = historicoDealugueis;
-    }
 
     public String getNome() {
         return nome;

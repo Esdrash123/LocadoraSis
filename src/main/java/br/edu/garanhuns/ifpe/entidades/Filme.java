@@ -5,7 +5,7 @@
  */
 package br.edu.garanhuns.ifpe.entidades;
 
-import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,27 +23,30 @@ public class Filme {
     @Id
     @GeneratedValue
     private int id;
-    
+
     @Column(length = 30, nullable = false)
     private String titulo;
-    
+
     @Column(length = 500, nullable = false)
     private String sinopse;
-    
+
     @Column(length = 8, nullable = false)
-    private Date dataLancamento;
-    
+    private String dataLancamento;
+
     @Column(length = 2, nullable = false)
     private int faixaIndicativa;
-    
+
     @Column(length = 3, nullable = false)
     private boolean disponivel;
 
-    public Filme(String titulo, String sinopse, Date dataLancamento, int faixaIndicativa) {
+    public Filme(String titulo, String sinopse, String dataLancamento, int faixaIndicativa) {
         this.titulo = titulo;
         this.sinopse = sinopse;
         this.dataLancamento = dataLancamento;
         this.faixaIndicativa = faixaIndicativa;
+    }
+
+    public Filme() {
     }
 
     public int getId() {
@@ -70,11 +73,11 @@ public class Filme {
         this.sinopse = sinopse;
     }
 
-    public Date getDataLancamento() {
+    public String getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 

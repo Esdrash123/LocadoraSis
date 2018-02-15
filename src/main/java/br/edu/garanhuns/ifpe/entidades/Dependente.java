@@ -39,7 +39,8 @@ public class Dependente {
         this.endereco = endereco;
         this.pendencia = pendencia;
     }
-   
+    public Dependente() {
+    }
 
     public Cliente getCliente() {
         return cliente;
