@@ -26,8 +26,7 @@ public class BuilderCliente {
     private String endereco;
     private boolean pendencia;
     private List<Dependente> dependentes;
-    private List<Filme> historicoDealugueis;
-
+   
     public String getNome() {
         return nome;
     }
@@ -76,13 +75,7 @@ public class BuilderCliente {
         this.dependentes = dependentes;
     }
 
-    public List<Filme> getHistoricoDealugueis() {
-        return historicoDealugueis;
-    }
-
-    public void setHistoricoDealugueis(List<Filme> historicoDealugueis) {
-        this.historicoDealugueis = historicoDealugueis;
-    }
+ 
      public Cliente criarCliente (){
         return new Cliente(nome, cpf, endereco,pendencia);
     }
